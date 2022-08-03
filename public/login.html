@@ -44,6 +44,8 @@
             data:JSON.stringify( {"email": $('#txtEmail').val(), "password": $('#txtPassword').val() } ),
             success: function(data){
               console.log(data);
+              localStorage.setItem('srcToken',JSON.stringify(data.token))
+              window.open('/', '_self')
             }
           });
 
